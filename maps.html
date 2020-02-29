@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+ <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBmhTVrLxd9ORN4TiLJxzqPfG9KgpyF52g"></script>
+<style>  html, body, #map_canvas { margin: 0; padding: 0; height: 100% } </style
+  </head>
+  <body>
+    <div id="map_canvas"></div>
+  </body>
+  <script>
+        var map;
+      var mapOptions = { center: new google.maps.LatLng(14.60470, 49.10873), zoom: 4,
+        mapTypeId: google.maps.MapTypeId.ROADMAP };
+
+      function initialize() {
+        map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+var userCoor = [["Port of Mombasa", -4.036878, 39.669571],
+                ["Somalia", 4.74061,48.11962],
+                ["Oman", 20.46803,58.44663],
+				["Mumbai",18.93036,72.84352],
+				["Bangalore",12.97160,77.59456]];
+
+var userCoorPath = [new google.maps.LatLng(-4.036878,39.669571),
+                    new google.maps.LatLng(4.74061,48.11962),
+                    new google.maps.LatLng(20.46803,58.44663),
+					new google.maps.LatLng(18.93036,72.84352),
+					new google.maps.LatLng(12.97160,77.59456)]
+
+var userCoordinate = new google.maps.Polyline({
+path: userCoorPath,
+strokeColor: "#FF0000",
+strokeOpacity: 1,
+strokeWeight: 2
+});
+userCoordinate.setMap(map);
+
+var infowindow = new google.maps.InfoWindow();
+
+var marker, i;
+
+for (i = 0; i < userCoor.length; i++) {  
+  marker = new google.maps.Marker({
+    position: new google.maps.LatLng(userCoor[i][1], userCoor[i][2]),
+    map: map
+  });
+
+
+  google.maps.event.addListener(marker, 'click', (function(marker, i) {
+    return function() {
+      infowindow.setContent(userCoor[i][0]);
+      infowindow.open(map, marker);
+    }
+  })(marker, i));
+
+
+
+}
+
+     }
+      google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+</html>

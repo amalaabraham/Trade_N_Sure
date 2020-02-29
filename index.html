@@ -48,8 +48,9 @@
                                 <td id="m1">Uttarashi</td>
                                 <td id="m2">Approved</td>
                                 <td id="m3"><script>n=new Date();
-				k=formatDate(Date.now())
-                                document.getElementById("m3").innerHTML=k;</script></td>
+				n.setTime(unixtime*1000);
+				dateString = n.toUTCString();
+                                document.getElementById("m3").innerHTML=dateString;</script></td>
                             </tr>
                             <tr>
                                 <td>Collection Point</td>

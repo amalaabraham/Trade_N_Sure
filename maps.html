@@ -17,17 +17,15 @@
       function initialize() {
         map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 
-var userCoor = [["Port of Mombasa", -4.036878, 39.669571],
-                ["Somalia", 4.74061,48.11962],
-                ["Oman", 20.46803,58.44663],
-				["Mumbai",18.93036,72.84352],
-				["Bangalore",12.97160,77.59456]];
+var userCoor = [["Uttarkashi",30.7268, 78.4354],
+                ["Dehradun", 30.3165,78.0322],
+                ["Walayar", 10.8428,76.8388],
+				["Kochi",9.9312,76.2673];
 
-var userCoorPath = [new google.maps.LatLng(-4.036878,39.669571),
-                    new google.maps.LatLng(4.74061,48.11962),
-                    new google.maps.LatLng(20.46803,58.44663),
-					new google.maps.LatLng(18.93036,72.84352),
-					new google.maps.LatLng(12.97160,77.59456)]
+var userCoorPath = [new google.maps.LatLng(30.7268, 78.4354),
+                    new google.maps.LatLng(30.3165,78.0322),
+                    new google.maps.LatLng(10.8428,76.8388),
+					new google.maps.LatLng(9.9312,76.2673)]
 
 var userCoordinate = new google.maps.Polyline({
 path: userCoorPath,

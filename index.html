@@ -48,8 +48,8 @@
                                 <td id="m1">Uttarashi</td>
                                 <td id="m2">Approved</td>
                                 <td id="m3"><script>n=new Date();
-				dateString=new Date(timestamp*1000 + n.getTimezoneOffset() * 60000)
-                                document.getElementById("m3").innerHTML=dateString;</script></td>
+				
+                                document.getElementById("m3").innerHTML=new Date(timestamp*1000 + n.getTimezoneOffset() * 60000);</script></td>
                             </tr>
                             <tr>
                                 <td>Collection Point</td>

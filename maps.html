@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmhTVrLxd9ORN4TiLJxzqPfG9KgpyF52g"></script>
+ <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBmhTVrLxd9ORN4TiLJxzqPfG9KgpyF52g"></script>
 <style>  html, body, #map_canvas { margin: 0; padding: 0; height: 100% } </style
   </head>
   <body>
@@ -17,19 +17,17 @@
       function initialize() {
         map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 
-var userCoor = [["Uttarkashi",30.7268, 78.4354],
-                ["Ahmedabad", 23.0225,72.5714],
-                ["Hyderabad", 17.3850,76.8388],
-				["Kochi",9.9312,76.2673]]
+var userCoor = [["Port of Mombasa", -4.036878, 39.669571],
+                ["Somalia", 4.74061,48.11962],
+                ["Oman", 20.46803,58.44663],
+				["Mumbai",18.93036,72.84352],
+				["Bangalore",12.97160,77.59456]];
 
-var userCoorPath = [new google.maps.LatLng(30.7268, 78.4354),
-                    
-	      new google.maps.LatLng(23.0225,72.5714),
-	      
-                    new google.maps.LatLng(17.3850,76.8388),
-					new google.maps.LatLng(9.9312,76.2673)
-	      		
-	      		]
+var userCoorPath = [new google.maps.LatLng(-4.036878,39.669571),
+                    new google.maps.LatLng(4.74061,48.11962),
+                    new google.maps.LatLng(20.46803,58.44663),
+					new google.maps.LatLng(18.93036,72.84352),
+					new google.maps.LatLng(12.97160,77.59456)]
 
 var userCoordinate = new google.maps.Polyline({
 path: userCoorPath,

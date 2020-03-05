@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Food Tracker</title>
+    <title>Diamond Tracker</title>
 	<style>
 	</style>
   </head>
@@ -44,34 +44,27 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Farmer</td>
-                                <td id="m1">Uttarashi</td>
+                                <td>Manufacturer</td>
+                                <td id="m1">Debeers</td>
                                 <td id="m2">Approved</td>
                                 <td id="m3"><script>n=new Date();
 				document.getElementById("m3").innerHTML=Date.now();
                                 </script></td>
                             </tr>
                             <tr>
-                                <td>Collection Point</td>
-                                <td id="c1">Dehradun</td>
+                                <td>Distributor</td>
+                                <td id="c1">Nexus</td>
                                 <td id="c2">Approved</td>
                                 <td id="c3"><script>
                                 document.getElementById("c3").innerHTML=Date.now();</script></td>
                             </tr>
                             <tr>
-                                <td>Check Point</td>
-                                <td id="d1">Valayar</td>
+                                <td>Merchant</td>
+                                <td id="d1">Diamonde</td>
                                 <td id="d2">Approved</td>
                                 <td id="d3"><script>
                                 document.getElementById("d3").innerHTML=Date.now();</script></td>
-                            </tr>
-                            <tr>
-                                <td>Merchant</td>
-                                <td id="s1">Farm fresh</td>
-                                <td id="s2">Approved</td>
-                                <td id="s3"><script>
-                                document.getElementById("s3").innerHTML=Date.now();</script></td>
-                            </tr>
+				</tr>
                         </tbody>
                     </table>
              <center><button class="uk-button uk-button-default uk-width-1-1" style="background-color:red;color:white;"  id="salesforceButton" style="visibility:hidden" onclick="window.location.href = 'https://fdbotdemo.lightning.force.com/lightning/o/Case/new?nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_VIEW&backgroundContext=%2Flightning%2Fpage%2Fhome';">Raise Ticket</button></center>
